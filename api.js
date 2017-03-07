@@ -6,11 +6,8 @@ const app = express()
 
 // API
 app.get('/api/problem/:q', (request, response) => {
-  
-  q = request.params.q
-
   // Retrieve the problem and serve as JSON
-  scrape(`https://projecteuler.net/problem=${q}`, {
+  scrape(`https://projecteuler.net/problem=${request.params.q}`, {
     title: "h2",
     question: ".problem_content p"
   }, (error, page) => {
