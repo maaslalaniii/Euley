@@ -21,7 +21,7 @@ let language = process.argv[3]
 let problems = []
 
 
-filesystem.readFile('data/project_euler.text', 'utf-8', (error, data) => {
+filesystem.readFile(__dirname + '/data/project_euler.text', 'utf-8', (error, data) => {
 
   error ? console.error(error) :
   
