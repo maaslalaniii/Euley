@@ -1,14 +1,14 @@
 {
   "name": "euley",
-  "version": "1.2.1",
-  "description": "API for retrieving project euler problems in JSON",
+  "version": "1.2.2",
+  "description": "An api and command line interface for retrieving problems from projecteuler.net",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
   },
   "bin": {
-    "euley": "./project-euler.js"
+    "euley": "./cli.js"
   },
   "author": "Maas Lalani",
   "license": "ISC",

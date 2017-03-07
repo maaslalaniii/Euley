@@ -8,10 +8,16 @@ const languages = {
     open_multiline_comment: '\"\"\"',
     close_multiline_comment: '\"\"\"',
     extension: 'py'
+  },
+  java: {
+    open_multiline_comment: '/*',
+    close_multiline_comment: '*/',
+    extension: 'java'
   }
 }
 
 let question = process.argv[2]
+let language = process.argv[3]
 let problems = []
 
 
@@ -20,7 +26,7 @@ filesystem.readFile('data/project_euler.text', 'utf-8', (error, data) => {
   error ? console.error(error) :
   
   problems = data.match(/Problem(.|\n)*?Answer:\s.+/gm)
-  createFile(question, problems[question - 1], languages.python)
+  createFile(question, problems[question - 1], languages[language])
 
 })
 
