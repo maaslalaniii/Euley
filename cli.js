@@ -7,12 +7,10 @@ const spawn = require('child_process').spawn
 const languages = require('./languages/languages')
 
 
-
 // Information from command line arguments
 let command = process.argv[2]
 let question = process.argv[3]
 let language = process.argv[4]
-
 
 
 // Generate the file problem 
@@ -28,7 +26,7 @@ if (command == 'g' || command == 'generate') {
 
     // Create a new file at peX.py
     language = languages[language]
-    let problem = problems[question]
+    let problem = problems[question-1]
 
     let stream = filesystem.createWriteStream(`pe${question}.${language.extension}`)
 
