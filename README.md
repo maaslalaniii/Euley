@@ -40,16 +40,25 @@ run `euley generate <problem> <language>` for example let's do the first problem
 
 ```bash
 $ euley generate 1 python
+
+Problem 1
+=========
+
+   If we list all the natural numbers below 10 that are multiples of 3 or 5,
+   we get 3, 5, 6 and 9. The sum of these multiples is 23.
+
+   Find the sum of all the multiples of 3 or 5 below 1000.
+
+File created at pe1.py
+
 $ subl pe1.py
 ```
 
-![Command line](https://camo.githubusercontent.com/9942679eac8cc9441aa91f766b68dc05c731315c/687474703a2f2f696d6167652e70726e747363722e636f6d2f696d6167652f32303566363738306239633634663431386633663632653339336136353135392e706e67)
-
-This will create and open the file in your text editor so you can begin coding.
+This will create the file. Open it in your text editor so you can begin coding. The problem description will also be at the top of the file so you don't have to keep the command line open. 
 
 
 ### Checking solutions
-After you've finished coding your solution make sure you print only the solution (should be 1 number).
+After you've finished coding your solution make sure you `print()` only the solution.
 
 Now you can check your solution by running `euley solution <problem> <language>`
 
@@ -60,7 +69,6 @@ Checking "pe1.py" against solution, your output: [spoiler]
 
 Your solution is correct!
 ```
-
 
 
 ### TODO
