@@ -56,6 +56,7 @@ else if (command == 's' || command == 'solution') {
 
   let solution
   let answer
+  language = languages[language]
 
   // Find the solution in the solutions.text file
   filesystem.readFile(`${__dirname}/data/solutions.text`, 'utf-8', (error, data) => {
@@ -70,8 +71,8 @@ else if (command == 's' || command == 'solution') {
   })
 
   // Find their answer by executing their solution and retrieving input
-  let file = `pe${question}.py`
-  let process = spawn('py', [file])
+  let file = `pe${question}.${language.extension}`
+  let process = spawn(language.command, [file])
 
   process.stdout.on('data', chunk => {
     answer = chunk.toString('utf8')
