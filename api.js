@@ -1,7 +1,7 @@
 // Dependencies
 const express = require('express')
 const scrape = require('scrape-it')
-const fetch = require('node-fetch')
+
 const app = express()
 
 // API
