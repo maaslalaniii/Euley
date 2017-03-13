@@ -13,7 +13,5 @@
   "author": "Maas Lalani",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.15.0",
-    "scrape-it": "^3.3.0"
   }
 }

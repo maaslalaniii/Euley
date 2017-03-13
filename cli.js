@@ -1,84 +1,41 @@
 #!/usr/bin/env node
 
-// Dependencies
-const filesystem = require('fs')
-const spawn = require('child_process').spawn
+// import all commands from their respective files
+let generate = require('./commands/generate')
+let solution = require('./commands/solution')
+let preview  = require('./commands/preview')
+let cheat    = require('./commands/cheat')
+let help     = require('./commands/help')
 
-const languages = require('./languages/languages')
-
-
-// Information from command line arguments
-let command = process.argv[2]
+// parse command line arguments
+let command  = process.argv[2]
 let question = process.argv[3]
 let language = process.argv[4]
 
+// execute the proper command based on arguements
+switch (command) {
 
-// Generate the file problem 
-if (command == 'g' || command == 'generate') {
+  case 'generate':
+    generate(question, language)
+    break
 
-  let problems = []
+  case 'solution':
+    solution(question, language)
+    break
 
-  filesystem.readFile(`${__dirname}/data/project_euler.text`, 'utf-8', (error, data) => {
+  case 'preview':
+    preview(question)
+    break
 
-    if (error) console.log(error)
-    
-    problems = data.match(/Problem(.|\n)*?Answer:\s.+/gm)
+  case 'cheat':
+    cheat(question)
+    break
 
-    // Create a new file at peX.py
-    language = languages[language]
-    let problem = problems[question-1]
+  case 'help':
+    help()
+    break
 
-    let stream = filesystem.createWriteStream(`pe${question}.${language.extension}`)
-
-    // Write out problem content to file
-    stream.once('open', () => {
-
-      stream.write(language.open_multiline_comment)
-
-      stream.write('\n')
-      stream.write(problem)
-      stream.write('\n\n')
-      
-      stream.write(language.close_multiline_comment)
-      stream.end()
-
-    })
-
-    console.log(`\n${problem}\n`)
-    console.log(`File created at pe${question}.${language.extension}`)
-
-  })
-}
-
-
-// Check the solution for the problem
-else if (command == 's' || command == 'solution') {
-
-  let solution
-  let answer
-  language = languages[language]
-
-  // Find the solution in the solutions.text file
-  filesystem.readFile(`${__dirname}/data/solutions.text`, 'utf-8', (error, data) => {
-  
-    if (error) console.log(error)
-  
-    let solutions = data.split('\n')
-    solution = solutions[question-1]
-    solution = solution.replace(/\d+\.\s/, '')
-    solution = parseInt(solution)
-
-  })
-
-  // Find their answer by executing their solution and retrieving input
-  let file = `pe${question}.${language.extension}`
-  let process = spawn(language.command, [file])
-
-  process.stdout.on('data', chunk => {
-    answer = chunk.toString('utf8')
-
-    console.log(`Checking \"${file}\" against solution, your output: ${answer}`)
-    console.log(`Your solution is ${answer == solution ? 'correct.' : 'wrong'}`)
-  })
+  default:
+    console.log('Invalid command syntax. Type \'help\' to see correct syntax.')
 
 }

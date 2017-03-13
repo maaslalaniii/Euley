@@ -2,23 +2,7 @@
 
 An api and command line interface for retrieving problems from [projecteuler.net](http://projecteuler.net)
 
-## API :fire:
-
-Visit [https://project-euler-rqlypwtoez.now.sh/api/problem/1](https://project-euler-rqlypwtoez.now.sh/api/problem/1) for problem number 1 in JSON format.
-
-```json
-{
-    "title": "Multiples of 3 and 5",
-    "question": "If we list all the natural numbers below 10 that
-                 are multiples of 3 or 5, we get 3, 5, 6 and 9.
-                 The sum of these multiples is 23. Find the sum of
-                 all the multiples of 3 or 5 below 1000."
-}
-```
-
-Note the API works with all 583 problems on the site, however some questions may be unsolvable through the api because of missing images or text files.
-
-## CLI :construction:
+## CLI :fire:
 
 ### Installation
 
@@ -58,9 +42,9 @@ This will create the file. Open it in your text editor so you can begin coding. 
 
 
 ### Checking solutions
-After you've finished coding your solution make sure you `print()` only the solution.
+After you've finished coding your solution make sure you ` print() ` the solution.
 
-Now you can check your solution by running `euley solution <problem> <language>`
+Now you can check your solution by running ` euley solution <problem> <language> `
 
 ```bash
 $ euley solution 1 python
@@ -70,6 +54,14 @@ Checking "pe1.py" against solution, your output: [spoiler]
 Your solution is correct!
 ```
 
+### Commands
+* ` cheat problem ` - displays the solution to the specified problem
+* ` help `- displays a list of possible commands
+* ` generate <problem> <language> ` - generates a file with the problem description commented out
+* ` preview <problem> ` - displays the problem on the console 
+* ` solution <problem> <language> ` - checks the answer of your program to the problem's solution
+
+note: all these commands are available offline.
 
 ### TODO
 Add more language support, currently CLI supports only python
