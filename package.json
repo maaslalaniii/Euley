@@ -1,6 +1,6 @@
 {
   "name": "euley",
-  "version": "1.4.2",
+  "version": "1.5.2",
   "description": "An api and command line interface for retrieving problems from projecteuler.net",
   "main": "app.js",
   "scripts": {
