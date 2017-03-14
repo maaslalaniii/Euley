@@ -24,15 +24,6 @@ run `euley generate <problem> <language>` for example let's do the first problem
 
 ```bash
 $ euley generate 1 python
-
-Problem 1
-=========
-
-   If we list all the natural numbers below 10 that are multiples of 3 or 5,
-   we get 3, 5, 6 and 9. The sum of these multiples is 23.
-
-   Find the sum of all the multiples of 3 or 5 below 1000.
-
 File created at pe1.py
 
 $ subl pe1.py
@@ -55,8 +46,8 @@ Your solution is correct!
 ```
 
 ### Commands
-* ` cheat problem ` - displays the solution to the specified problem
-* ` help `- displays a list of possible commands
+* ` cheat <problem> ` - displays the solution to the specified problem
+* ` help ` - displays a list of possible commands
 * ` generate <problem> <language> ` - generates a file with the problem description commented out
 * ` preview <problem> ` - displays the problem on the console 
 * ` solution <problem> <language> ` - checks the answer of your program to the problem's solution
