@@ -1,17 +1,27 @@
 {
   "name": "euley",
-  "version": "1.5.2",
-  "description": "An api and command line interface for retrieving problems from projecteuler.net",
+  "version": "1.5.3",
+  "description": "A command line interface for retrieving problems and checking solutions from projecteuler.net",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maaslalaniii/Euley.git"
   },
   "bin": {
     "euley": "./cli.js"
   },
+  "keywords": [
+    "project",
+    "euler",
+    "programming",
+    "math",
+    "cli"
+  ],  
   "author": "Maas Lalani",
   "license": "ISC",
-  "dependencies": {
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }
