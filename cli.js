@@ -16,22 +16,27 @@ let language = process.argv[4]
 switch (command) {
 
   case 'generate':
+  case 'g':
     generate(question, language)
     break
 
   case 'solution':
+  case 's':
     solution(question, language)
     break
 
   case 'preview':
+  case 'p':
     preview(question)
     break
 
   case 'cheat':
+  case 'c':
     cheat(question)
     break
 
   case 'help':
+  case 'h':
     help()
     break
 
