@@ -1,6 +1,6 @@
 # Euley
 
-An api and command line interface for retrieving problems from [projecteuler.net](http://projecteuler.net)
+An offline command line interface for retrieving problems from [projecteuler.net](http://projecteuler.net)
 
 ## CLI :fire:
 
