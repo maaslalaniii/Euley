@@ -55,7 +55,7 @@ Your solution is correct!
 note: all these commands are available offline.
 
 ### TODO
-Add more language support, currently CLI supports only python
+Add more language support, currently CLI supports only python and javascript
 
 ### Contribute
 Additions to the module are always welcome! :raised_hands:
