@@ -11,7 +11,6 @@ function solution(question, language) {
   let solutions = data.split('\n')
   let solution = solutions[question - 1]
 
-
   // remove the line number from before the answer
   solution = solution.replace(/\d+\.\s/, '')
   solution = parseInt(solution)
@@ -31,7 +30,6 @@ function solution(question, language) {
     // naive method since time may very from system to system
     execution_time = end_time - start_time - (45)
     execution_time = execution_time > 0 ? execution_time : 1 
-
 
     answer = chunk.toString('utf8')
 
