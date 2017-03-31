@@ -2,7 +2,7 @@
 
 An offline command line interface for retrieving problems from [projecteuler.net](http://projecteuler.net)
 
-## CLI :fire:
+## Command Line Interface
 
 ### Installation
 
